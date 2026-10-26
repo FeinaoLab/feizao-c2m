@@ -1,0 +1,312 @@
+{
+  "brand": {
+    "name": "飞造",
+    "full": "飞造C2M定制电商",
+    "tagline": "先下单 · 后智造",
+    "port": 8112
+  },
+  "tables": [
+    {
+      "name": "products",
+      "label": "定制商品",
+      "fields": [
+        {
+          "name": "title",
+          "label": "商品名",
+          "type": "text"
+        },
+        {
+          "name": "price",
+          "label": "定制价(元)",
+          "type": "number"
+        },
+        {
+          "name": "stock",
+          "label": "现货库存",
+          "type": "int"
+        },
+        {
+          "name": "category",
+          "label": "品类",
+          "type": "text"
+        },
+        {
+          "name": "desc",
+          "label": "交付说明",
+          "type": "text"
+        }
+      ],
+      "seed": [
+        [
+          "定制纯棉T恤",
+          39,
+          0,
+          "服饰",
+          "预售制 15天交付"
+        ],
+        [
+          "定制情侣对杯",
+          89,
+          0,
+          "家居",
+          "刻字定制 20天交付"
+        ],
+        [
+          "定制人体工学椅",
+          899,
+          0,
+          "家具",
+          "按需排产 30天交付"
+        ]
+      ]
+    },
+    {
+      "name": "factories",
+      "label": "合作工厂",
+      "fields": [
+        {
+          "name": "name",
+          "label": "工厂",
+          "type": "text"
+        },
+        {
+          "name": "location",
+          "label": "位置",
+          "type": "text"
+        },
+        {
+          "name": "category",
+          "label": "品类",
+          "type": "text"
+        },
+        {
+          "name": "capacity",
+          "label": "产能",
+          "type": "text"
+        }
+      ],
+      "seed": [
+        [
+          "佛山T恤智造厂",
+          "佛山",
+          "服饰",
+          "日产能8000件"
+        ],
+        [
+          "潮州陶瓷厂",
+          "潮州",
+          "家居",
+          "日产能3000件"
+        ],
+        [
+          "佛山家具智造基地",
+          "佛山",
+          "家具",
+          "月产能2000台"
+        ]
+      ]
+    },
+    {
+      "name": "customization_options",
+      "label": "定制选项",
+      "fields": [
+        {
+          "name": "product_id",
+          "label": "商品ID",
+          "type": "int"
+        },
+        {
+          "name": "option",
+          "label": "选项",
+          "type": "text"
+        },
+        {
+          "name": "choices",
+          "label": "可选值",
+          "type": "text"
+        },
+        {
+          "name": "extra_fee",
+          "label": "加价(元)",
+          "type": "number"
+        }
+      ],
+      "seed": [
+        [
+          1,
+          "尺码",
+          "S/M/L/XL",
+          0
+        ],
+        [
+          1,
+          "印花",
+          "单面/双面",
+          10
+        ],
+        [
+          3,
+          "面料",
+          "网布/海绵",
+          50
+        ]
+      ]
+    },
+    {
+      "name": "pre_orders",
+      "label": "预售定制单",
+      "fields": [
+        {
+          "name": "pre_no",
+          "label": "预售单号",
+          "type": "text"
+        },
+        {
+          "name": "product_id",
+          "label": "商品ID",
+          "type": "int"
+        },
+        {
+          "name": "user",
+          "label": "用户",
+          "type": "text"
+        },
+        {
+          "name": "options",
+          "label": "定制组合",
+          "type": "text"
+        },
+        {
+          "name": "status",
+          "label": "状态",
+          "type": "text"
+        },
+        {
+          "name": "deposit",
+          "label": "定金比例",
+          "type": "number"
+        }
+      ],
+      "seed": [
+        [
+          "C2M20261024001",
+          1,
+          "小蔡",
+          "L+双面印花",
+          "已付定金",
+          0.3
+        ],
+        [
+          "C2M20261023002",
+          3,
+          "老赵",
+          "网布款",
+          "生产中",
+          0.3
+        ]
+      ]
+    },
+    {
+      "name": "cart",
+      "label": "购物车",
+      "fields": [
+        {
+          "name": "user",
+          "label": "用户",
+          "type": "text"
+        },
+        {
+          "name": "product_id",
+          "label": "商品ID",
+          "type": "int"
+        },
+        {
+          "name": "qty",
+          "label": "数量",
+          "type": "int"
+        }
+      ],
+      "seed": []
+    },
+    {
+      "name": "orders",
+      "label": "订单",
+      "fields": [
+        {
+          "name": "order_no",
+          "label": "订单号",
+          "type": "text"
+        },
+        {
+          "name": "user",
+          "label": "下单人",
+          "type": "text"
+        },
+        {
+          "name": "items",
+          "label": "商品明细",
+          "type": "text"
+        },
+        {
+          "name": "total",
+          "label": "金额(元)",
+          "type": "number"
+        },
+        {
+          "name": "address",
+          "label": "收货地址",
+          "type": "text"
+        },
+        {
+          "name": "status",
+          "label": "状态",
+          "type": "text"
+        }
+      ],
+      "seed": []
+    },
+    {
+      "name": "users",
+      "label": "用户",
+      "fields": [
+        {
+          "name": "username",
+          "label": "用户名",
+          "type": "text"
+        },
+        {
+          "name": "password",
+          "label": "密码",
+          "type": "text"
+        },
+        {
+          "name": "role",
+          "label": "角色",
+          "type": "text"
+        }
+      ],
+      "seed": [
+        [
+          "admin",
+          "admin123",
+          "admin"
+        ],
+        [
+          "ops01",
+          "ops123456",
+          "ops"
+        ],
+        [
+          "view01",
+          "view123456",
+          "viewer"
+        ],
+        [
+          "factory01",
+          "admin123",
+          "工厂"
+        ]
+      ]
+    }
+  ]
+}
