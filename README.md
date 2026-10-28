@@ -1,27 +1,48 @@
-# 飞造C2M定制电商
+# 🏭 飞造 C2M 定制电商 (feizao-c2m)
 
-> 先下单 · 后智造
+> 用户定制，工厂直造，让每一件产品都独一无二。
 
-零依赖（Python 标准库 + SQLite）的 飞造，飞系电商系列成员。
+## ✨ 项目简介
 
-## 运行
+飞造 C2M（Customer To Manufacturer）是一个用户定制化电商平台，打通消费者与工厂之间的链路，支持个性化设计与柔性生产，让每位用户都能拥有专属定制的产品。
+
+## 🚀 核心特性
+
+- 🎨 **用户定制** — 在线自定义产品款式、颜色、材质、尺寸
+- 🏭 **工厂直连** — 直连优质工厂，去除中间环节，价格更优
+- ✏️ **个性化设计** — 强大的在线设计工具，所见即所得
+- 🔧 **柔性生产** — 小批量灵活生产，满足个性化需求
+- 📦 **全程追踪** — 从下单到生产到发货，全程可视化
+- 💡 **智能推荐** — AI 辅助设计推荐，激发创意灵感
+
+## 🛠️ 快速开始
 
 ```bash
-cd backend
-python server.py
-# 访问 http://127.0.0.1:8112/ ，三角色: admin/admin123 · ops01/ops123456 · view01/view123456
+# 克隆仓库
+git clone https://github.com/dukema81/feizao-c2m.git
+cd feizao-c2m
+
+# 安装依赖
+npm install
+
+# 启动开发服务器
+npm run dev
+
+# 构建生产版本
+npm run build
 ```
 
-## 测试
+## 📦 技术栈
 
-```bash
-python -m pytest tests/ -q
-```
+- 前端框架 + UI 组件库
+- 3D 渲染引擎 + 在线设计器
+- 状态管理 + 路由
+- 订单系统 + 工厂对接 + 支付集成
 
-## 目录
+## 📄 许可证
 
-- backend/  通用引擎 engine.py + 规格 spec.json + 服务入口 server.py
-- frontend/ 原生 JS SPA（门店 + 统计 + 规格驱动后台）
-- tools/    专属 Logo（icon.svg）+ UI 巡检（ui_check.py，零依赖探活+截图）
-- docs/     建设方案
-- tests/    API 集成测试（真实起服务全链路断言）
+本项目基于 [MIT License](LICENSE) 开源许可协议。
+
+---
+
+Made with ❤️ by dukema81
